@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Average</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="font-family: 'Courier New', Courier, monospace;">
+    <div style="width: auto; display: block; margin: auto; margin-top: 30px; margin-bottom: 30px;">
+        <center>
+            <input type="number" style="font-family: 'Courier New', Courier, monospace;" id="temp" placeholder="temp" autofocus>
+            <input type="date" style="font-family: 'Courier New', Courier, monospace; " id="date" placeholder="date">
+            <button onclick="add_list()" style="font-family: 'Courier New', Courier, monospace;">Add</button>
+            <button onclick="delete_list()" style="font-family: 'Courier New', Courier, monospace;">Delete</button>
+            <button onclick="find_average_temp()" style="font-family: 'Courier New', Courier, monospace;">Show Average</button>
+            <p id="temps" style="color: rgb(180, 180, 180);"></p>
+        </center>
+    </div>
+    <center>
+        <table>
+
+            <tr>
+                <td>
+                    <p>temp</p>
+                </td>
+                <td>
+                    <p id="temps1" style="color: rgb(233, 71, 248);"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>total</p>
+                </td>
+                <td>
+                    <p id="total1" style=" color: forestgreen;"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>equation</p>
+                </td>
+                <td>
+                    <p id="equation1" style=" color: forestgreen;"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>average</p>
+                </td>
+                <td>
+                    <p id="average1" style=" color: forestgreen;"></p>
+                </td>
+            </tr>
+
+        </table>
+    </center>
+
+    <center>
+        <div id="canvasdiv">
+            <canvas id="myChart"></canvas>
+        </div>
+    </center>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
